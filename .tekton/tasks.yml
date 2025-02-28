@@ -40,14 +40,13 @@ kind: Task
 metadata:
   name: nose
 spec:
-  description:
   workspaces:
     - name: source
   params:
-    name: args
-    description: Arguments to pass to nose
-    type: string
-    default: "-v"
+    - name: args
+      description: Arguments to pass to nose
+      type: string
+      default: "-v"
   steps:
     - name: nosetests
       image: python:3.9-slim
